@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+body {
+	background: linear-gradient(-45deg, #6441A5, #2a0845);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;	color: #fff;
+	overflow: hidden;
+}
+
+.congrats {
+	position: absolute;
+	top: 140px;
+	width: 550px;
+	height: 100px;
+	padding: 20px 10px;
+	text-align: center;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+
+h1,p {
+	transform-origin: 50% 50%;
+	font-size: 50px;
+	font-family: 'Sigmar One', cursive;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	text-align: center;
+	width: 100%;
+}
