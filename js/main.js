@@ -16,16 +16,23 @@ function myFunction() {
 
     // correct answer
     if(submittedAnswer == correctAnswer) {
-        submittedAnswerObj.parentElement.style.background = "#28a745";
+        submittedAnswerObj.parentElement.style.background = "#39f775";
+        submittedAnswerObj.parentElement.style.color = "#ffffff";
+        var audio = document.getElementById("audioR");
+        audio.play();
     } else {
         // wrong answer
-        submittedAnswerObj.parentElement.style.background = "#dc3545";
-        document.getElementById("div" + correctAnswer).style.background ="#28a745";
+        submittedAnswerObj.parentElement.style.background = "#FB385C";
+        document.getElementById("div" + correctAnswer).style.background ="#38fb59";
+        document.getElementById("div" + correctAnswer).style.color ="#ffffff";
+        submittedAnswerObj.parentElement.style.color = "#ffffff";
+        var audio = document.getElementById("audioW");
+        audio.play();
     }
 }
 
-
-var timeLeft = 30;
+//timer
+var timeLeft = 120;
 var elem = document.getElementById('timer');
 var timerId = setInterval(countdown, 1000);
 
@@ -37,3 +44,21 @@ function countdown() {
         timeLeft--;
     }
 }
+
+//lifeline vanish
+function vanish1(){
+    document.getElementById("exp").style.display = "none";
+}
+function vanish2(){
+    document.getElementById("50").style.display = "none";
+}
+function vanish3(){
+    document.getElementById("int").style.display = "none";
+}
+
+//music
+// function play() {
+//     var audio = document.getElementById("next");
+//     audio.play();
+// }
+// playn();
